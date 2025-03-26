@@ -35,3 +35,16 @@ const dog: Dog = {
     race: "Chucho",
     age: 15
 }
+
+
+const cat: Cat = {
+    name: "Kira",
+    color: "black",
+    canSleep: true
+}
+
+const snake: Snake = {
+    canEat: true,
+    canDrink: true,
+    canSleep: true
+}
