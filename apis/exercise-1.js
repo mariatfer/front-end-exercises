@@ -1,12 +1,17 @@
-
-fetch("https://pokeapi.co/api/v2/pokemon/ditto")
-.then((response) => {
-    if (response.ok) {
-        return response.json();
+class FetchError extends Error {
+    constructor(message){
+        super(message);
     }
-    throw new Error(response.status);
-})
-.then((data) => {
+}
+
+async function fetchPokeapi() {
+  try {
+    const response = await fetch("https://pokeapi.co/api/v2/pokemon/ditto");
+    const data = await response.json();
     console.log(data);
-})
-.catch((error) => {throw new Error(error)})
+  } catch (e) {
+    throw new FetchError(e);
+  }
+}
+
+fetchPokeapi();
