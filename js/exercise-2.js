@@ -1,10 +1,10 @@
 console.log(a); // Devuelve que la variable a no se encuentra definida
 var a = "hola";
 
-console.log(b); // Devuelve que la variable a no se encuentra definida
+console.log(b);
 var b = "hola";
 
-console.log(c); // Devuelve que la variable a no se encuentra definida
+console.log(c);
 var c = "hola";
 
 sayHi(); // Devuelve 'Hola desde sayHi!' porque lleva las funciones arriba del todo antes de ejecutarlo
