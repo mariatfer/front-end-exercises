@@ -1,0 +1,36 @@
+:root {
+    --font-size-small: 0.9em;
+    --font-size-large: 3em;
+    --font-size-calc: calc(3em - 0.578em);
+    --primary-color: blue;
+    --secondary-color: purple;
+    --background-color: pink;
+
+    --transition-speed: 0.4s;
+}
+
+.firstHeader {
+    font-size: var(--font-size-small);
+    color: var(--primary-color);
+}
+
+.secondHeader {
+    font-size: var(--font-size-large);
+    color: var(--secondary-color);
+}
+
+.thirdHeader {
+    background-color: var(--background-color);
+    
+}
+
+.buttonTransition {
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    font-size: var(--font-size-calc);
+    transition: transform var(--transition-speed) ease;
+}
+
+.buttonTransition:hover {
+    transform: scale(1.08);
+}
