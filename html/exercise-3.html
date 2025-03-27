@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
     <style>
-        form {
+        .forms {
             display: flex;
             flex-direction: column;
             margin: auto;
@@ -14,7 +14,7 @@
             gap: 0.5em;
         }
 
-        fieldset {
+        .fieldsets {
             border: none;
             padding: 0;
             margin: 0;
@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <form action="exercise-1.html" method="get" target="_blank">
+    <form action="exercise-1.html" method="get" target="_blank" class="forms">
         <label for="name">Name</label>
         <input type="text" name="name" id="name" placeholder="Write your first name here" aria-label="First Name"
             required>
@@ -35,14 +35,14 @@
         <label for="email">Email</label>
         <input type="email" name="email" id="email" placeholder="Write your email here" aria-label="Email"
             autocomplete="email" required>
-        <fieldset>
+        <fieldset class="fieldsets">
             <legend>Agree to the terms?</legend>
             <input type="radio" name="radioTerms" id="radioTermsYes" value="yes" required>
             <label for="radioTermsYes">Yes</label>
             <input type="radio" name="radioTerms" id="radioTermsNo" value="no">
             <label for="radioTermsNo">No</label>
         </fieldset>
-        <fieldset>
+        <fieldset class="fieldsets">
             <input type="checkbox" name="checkTerms" id="checkTerms" required>
             <label for="checkTerms">Agree to the terms?</label>
         </fieldset>
