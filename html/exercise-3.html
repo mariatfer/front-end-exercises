@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <form action="exercise-1.html">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" aria-label="Write your first name here">
+        <label for="last">Last</label>
+        <input type="text" name="last" id="last" aria-label="Write your last name here">
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" aria-label="Enter your age here">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" aria-label="Write your email here">
+        <div>
+            <input type="radio" name="radioTerms" id="radioTerms" aria-label="if you agree check the terms">
+            <label for="radioTerms">Agree to the terms?</label>    
+        </div>
+        <div>
+            <input type="checkbox" name="radioTerms" id="radioTerms" aria-label="if you agree check the terms">
+            <label for="checkTerms">Agree to the terms?</label>    
+        </div>
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>
