@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,27 +11,41 @@
             flex-direction: column;
             margin: auto;
             width: 50%;
+            gap: 0.5em;
+        }
+
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
         }
     </style>
 </head>
+
 <body>
-    <form action="exercise-1.html">
+    <form action="exercise-1.html" method="get" target="_blank">
         <label for="name">Name</label>
-        <input type="text" name="name" id="name" aria-label="Write your first name here">
+        <input type="text" name="name" id="name" placeholder="Write your first name here" aria-label="First Name"
+            required>
         <label for="last">Last</label>
-        <input type="text" name="last" id="last" aria-label="Write your last name here">
+        <input type="text" name="last" id="last" placeholder="Write your last name here" aria-label="Last Name"
+            required>
         <label for="age">Age</label>
-        <input type="number" name="age" id="age" aria-label="Enter your age here">
+        <input type="number" name="age" id="age" placeholder="Enter your age here" aria-label="Age" required>
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" aria-label="Write your email here">
-        <div>
-            <input type="radio" name="radioTerms" id="radioTerms" aria-label="if you agree check the terms">
-            <label for="radioTerms">Agree to the terms?</label>    
-        </div>
-        <div>
-            <input type="checkbox" name="radioTerms" id="radioTerms" aria-label="if you agree check the terms">
-            <label for="checkTerms">Agree to the terms?</label>    
-        </div>
+        <input type="email" name="email" id="email" placeholder="Write your email here" aria-label="Email"
+            autocomplete="email" required>
+        <fieldset>
+            <legend>Agree to the terms?</legend>
+            <input type="radio" name="radioTerms" id="radioTermsYes" value="yes" required>
+            <label for="radioTermsYes">Yes</label>
+            <input type="radio" name="radioTerms" id="radioTermsNo" value="no">
+            <label for="radioTermsNo">No</label>
+        </fieldset>
+        <fieldset>
+            <input type="checkbox" name="checkTerms" id="checkTerms" required>
+            <label for="checkTerms">Agree to the terms?</label>
+        </fieldset>
         <button type="submit">Send</button>
     </form>
 </body>
