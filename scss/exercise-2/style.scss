@@ -1,0 +1,24 @@
+@mixin flex ($direction: "row", $justify: "center", $align: "center", $gap: 0, $grow: "initial"){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-content: $align;
+    gap: $gap;
+    flex-grow: $grow;
+}
+
+body {
+    @include flex(column, space-between, center, 0, initial);
+    height: 100vh;
+    margin: 0;
+}
+
+.header, .footer {
+    height: 10vh;
+    width: 100%;
+    background-color: cornflowerblue;
+}
+
+.main {
+    @include flex(column, flex-start, center, 0.2em, 1);
+}
