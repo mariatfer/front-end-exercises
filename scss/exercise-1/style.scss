@@ -1,0 +1,30 @@
+$primary-color: blue;
+$second-color: pink;
+$third-color: purple;
+$font-size-small: 1em;
+$font-size-medium: 2em;
+$font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+$transition-speed: 0.3s;
+
+.header__first {
+  color: $primary-color;
+}
+
+.header__second {
+  font-size: $font-size-small;
+}
+
+.header__third {
+    color: $third-color;
+    font-size: $font-size-medium;
+    font-family: $font-family;
+}
+
+.button__transition {
+    background-color: $second-color;
+    transition: transform $transition-speed ease;
+}
+
+.button__transition:hover {
+    transform: scale(1.15);
+}
