@@ -9,28 +9,28 @@
     --transition-speed: 0.4s;
 }
 
-.firstHeader {
+.header__first {
     font-size: var(--font-size-small);
     color: var(--primary-color);
 }
 
-.secondHeader {
+.header__second {
     font-size: var(--font-size-large);
     color: var(--secondary-color);
 }
 
-.thirdHeader {
+.header__third {
     background-color: var(--background-color);
     
 }
 
-.buttonTransition {
+.button__transition {
     background-color: var(--background-color);
     color: var(--secondary-color);
     font-size: var(--font-size-calc);
     transition: transform var(--transition-speed) ease;
 }
 
-.buttonTransition:hover {
+.button__transition:hover {
     transform: scale(1.08);
 }
