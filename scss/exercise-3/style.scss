@@ -1,4 +1,3 @@
-
 .home {
     display: flex;
     flex-wrap: wrap;
@@ -8,10 +7,16 @@
     background-color: pink;
     width: 31.25rem;
     height: 10rem;
-}
 
-.home__room {
-    width: calc(33.33% - 0.5em);
-    height: auto;
-    background-color: purple;
+    &__room {
+        width: calc(33.33% - 0.5em);
+        height: auto;
+        background-color: purple;
+        &--bed {
+            background-color: red;
+            width: 4rem;
+            height: 2rem;
+            border-radius: 0.25rem;
+        }
+    }
 }
