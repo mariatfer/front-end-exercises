@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Expansion Panels Fluido</title>
+  <style>
+    .expansion-panel {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin: 10px 0;
+      overflow: hidden;
+    }
+
+    .expansion-header {
+      background: #f5f5f5;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .expansion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      padding: 0 15px;
+    }
+
+    .expansion-panel.active .expansion-content {
+      /* padding se controla por JS también */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="expansion-panel">
+    <div class="expansion-header">Panel 1</div>
+    <div class="expansion-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat suscipit molestiae adipisci blanditiis rerum sapiente ipsam tenetur deserunt quis enim ut laudantium, quisquam alias voluptatum. Necessitatibus consequuntur maiores fugit quibusdam.</p>
+    </div>
+  </div>
+
+  <div class="expansion-panel">
+    <div class="expansion-header">Panel 2</div>
+    <div class="expansion-content">
+      <p>Otro contenido diferente, tal vez más corto.</p>
+    </div>
+  </div>
+
+  <script>
+    const headers = document.querySelectorAll('.expansion-header');
+
+    headers.forEach(header => {
+      header.addEventListener('click', () => {
+        const panel = header.parentElement;
+        const content = panel.querySelector('.expansion-content');
+
+        if (panel.classList.contains('active')) {
+          // Cerrar
+          content.style.maxHeight = '0';
+          content.style.paddingTop = '0';
+          content.style.paddingBottom = '0';
+          panel.classList.remove('active');
+        } else {
+          // Cerrar los otros
+          document.querySelectorAll('.expansion-panel.active').forEach(p => {
+            p.classList.remove('active');
+            const c = p.querySelector('.expansion-content');
+            c.style.maxHeight = '0';
+            c.style.paddingTop = '0';
+            c.style.paddingBottom = '0';
+          });
+
+          // Abrir este
+          panel.classList.add('active');
+          content.style.maxHeight = content.scrollHeight + 'px';
+          content.style.paddingTop = '15px';
+          content.style.paddingBottom = '15px';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
